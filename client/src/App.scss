@@ -1,0 +1,55 @@
+:root {
+  --baseColor: #606468;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* layout/base.css */
+
+:root {
+  --primary: #2c3338;
+  --secondary: #44494f;
+  --tertiary: #3b4148;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--htmlFontSize);
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+  font-size: var(--bodyFontSize);
+  font-weight: var(--bodyFontWeight);
+  line-height: var(--bodyLineHeight);
+  margin: 0;
+  min-block-size: 100vh;
+}
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* .icons {
+  display: none;
+} */

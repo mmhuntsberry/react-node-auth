@@ -1,0 +1,67 @@
+@use "../App.scss";
+
+.form {
+  /* width: 400px; */
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.field {
+  display: flex;
+  /* align-items: center; */
+  margin-bottom: 8px;
+}
+
+.label {
+  background-color: var(--tertiary);
+  /* padding: 0 8px; */
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  padding: 8px;
+}
+
+.input {
+  height: 60px;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #434a52;
+  border: none;
+  padding-left: 8px;
+  flex: 1;
+}
+
+/* .icon {
+  display: inline-block;
+  width: 48px;
+  vertical-align: middle;
+} */
+.icon {
+  align-self: center;
+  // fill: var(--secondary);
+
+  /* padding: 0 8px; */
+  /* block-size: 3.2rem; */
+  /* display: inline-block; */
+  height: 40px;
+  width: 50px;
+  /* width: 48px; */
+  fill: var(--primary);
+  /* height: 60px; */
+  /* inline-size: 2rem; */
+}
+
+.form input[type="password"],
+.form input[type="text"],
+.form input[type="submit"] {
+  inline-size: 100%;
+}
+
+.button {
+  border: 0;
+  background-color: #ea4b88;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+}

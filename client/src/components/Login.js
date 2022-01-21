@@ -1,43 +1,61 @@
 import React from "react";
+import styles from "./Login.module.scss";
+import userIcon from "../assets/user-icon3.svg";
+import icons from "../assets/icons.svg";
 
 export function Login() {
   return (
     <form>
-      <div class="imgcontainer">
-        <img src="img_avatar2.png" alt="Avatar" class="avatar" />
-      </div>
-
-      <div class="container">
-        <label for="uname">
-          <b>Username</b>
-        </label>
-        <input type="text" placeholder="Enter Username" name="uname" required />
-
-        <label for="psw">
-          <b>Password</b>
-        </label>
-        <input
-          type="password"
-          placeholder="Enter Password"
-          name="psw"
-          required
-        />
-
-        <button type="submit">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember" /> Remember
-          me
-        </label>
-      </div>
-
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">
-          Cancel
+      <div className={styles.form}>
+        <div className={styles.field}>
+          {/* <label htmlFor="login__username" className={styles.label}>
+            <img className={styles.icon} src={userIcon} alt="user icon" />
+            <span className="hidden">Username</span>
+          </label> */}
+          <label for="login__password" className={styles.label}>
+            <svg className={styles.icon}>
+              <use xlinkHref={`${icons}#icon-user`}></use>
+            </svg>
+            <span class="hidden">Password</span>
+          </label>
+          <input
+            className={styles.input}
+            type="text"
+            placeholder="Username"
+            name="uname"
+            required
+          />
+        </div>
+        <div className={styles.field}>
+          {/* <label htmlFor="login__username" className={styles.label}>
+            <img className={styles.icon} src={userIcon} alt="user icon" />
+            <span className="hidden">Username</span>
+          </label> */}
+          <label for="login__password" className={styles.label}>
+            <svg className={styles.icon}>
+              <use xlinkHref={`${icons}#icon-lock`}></use>
+            </svg>
+            <span class="hidden">Password</span>
+          </label>
+          <input
+            className={styles.input}
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+        </div>
+        <button type="submit" className={styles.button}>
+          Login
         </button>
-        <span class="psw">
-          Forgot <a href="#">password?</a>
-        </span>
       </div>
+
+      <p class="text--center">
+        Not a member? <a href="#">Sign up now</a>{" "}
+        <svg class="icon">
+          <use xlinkHref="#icon-arrow-right"></use>
+        </svg>
+      </p>
     </form>
   );
 }
