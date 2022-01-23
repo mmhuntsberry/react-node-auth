@@ -6,7 +6,7 @@ import icons from "../assets/icons.svg";
 export function Login() {
   return (
     <form>
-      <div className={styles.form}>
+      <div className={`${styles.form} ${styles.login}`}>
         <div className={styles.field}>
           {/* <label htmlFor="login__username" className={styles.label}>
             <img className={styles.icon} src={userIcon} alt="user icon" />
@@ -50,10 +50,10 @@ export function Login() {
         </button>
       </div>
 
-      <p class="text--center">
+      <p class={styles.text}>
         Not a member? <a href="#">Sign up now</a>{" "}
-        <svg class="icon">
-          <use xlinkHref="#icon-arrow-right"></use>
+        <svg class={styles.icon}>
+          <use xlinkHref={`${icons}#icon-arrow-right`}></use>
         </svg>
       </p>
     </form>

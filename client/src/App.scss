@@ -13,10 +13,86 @@
 /* layout/base.css */
 
 :root {
+  // sizes
+  --4: 0.25rem; // 4px
+  --8: 0.5rem; // 8px
+  --10: 0.625rem; /* 10px */
+  --12: 0.75rem; /* 12px */
+  --14: 0.875rem; /* 14px */
+  --16: 16px;
+  --18: 18px;
+  --20: 1.25rem; /* 20px */
+  --24: 1.5rem; /* 24px */
+  --32: 2rem; /* 32px */
+  --40: 2.5rem; /* 40px */
+  --56: 3.5rem; /* 56px */
+  --64: 4rem; /* 64px */
+
   --primary: #2c3338;
-  --secondary: #44494f;
+  --secondary: var(--white);
   --tertiary: #3b4148;
+  --font: Helvetica, Arial, sans-serif;
+
+  --bg-color: var(--gray-0);
+
+  // Colors
+  --gray-0: #212529;
+  --gray-1: #343a40;
+  --gray-2: #495057;
+  --gray-3: #6c757d;
+  --gray-4: #adb5bd;
+  --gray-5: #ced4da;
+
   --white: #fff;
+  --pink: #e94b87;
+
+  /* font sizes (body) */
+  --body-fs-0: var(--10);
+  --body-fs-1: var(--12);
+  --body-fs-2: var(--14);
+  --body-fs-3: var(--16);
+  --body-fs-4: var(--18);
+  --body-fs-5: var(--20);
+
+  /* font sizes (titles) */
+  --title-fs-0: var(--24);
+  --title-fs-1: var(--32);
+  --title-fs-2: var(--40);
+  --title-fs-3: var(--56);
+
+  --emphasized: italic;
+  --font-weight-light: 100;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  --font-weight-bolder: 800;
+
+  // letter spacing
+  --ls-0: normal;
+  --ls-1: 1px;
+  --ls-2: 2px;
+
+  /* spacing */
+  --p-1: var(--4);
+  --p-2: var(--8); /*8px */
+  --p-3: var(--12); /* 12px */
+  --p-4: var(--16); /* 16px */
+  --p-5: var(--20); /* 20px */
+  --p-6: var(--24); /* 24px */
+  --p-7: var(--32); /* 32px */
+  --p-8: var(--48); /* 48px */
+  --p-9: var(--64); /* 64px */
+
+  /* layout */
+  --l-1: var(--spacing-4);
+  --l-2: var(--spacing-6);
+  --l-3: var(--spacing-7);
+  --l-4: var(--spacing-8);
+  --l-5: 64px;
+  --l-6: 96px;
+  --l-7: 120px;
+  --l-8: 150px;
+  --l-9: 160px;
+  --l-0: 175px;
 }
 
 * {
@@ -29,14 +105,24 @@ html {
 }
 
 body {
-  background-color: var(--primary);
-  color: var(--secondary);
-  font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
-  font-size: var(--bodyFontSize);
+  background-color: var(--bg-color);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: var(--body-fs-1);
   font-weight: var(--bodyFontWeight);
   line-height: var(--bodyLineHeight);
   margin: 0;
   min-block-size: 100vh;
+  letter-spacing: var(--ls-1);
+}
+
+a {
+  color: var(--pink);
+}
+
+input,
+button {
+  letter-spacing: var(--ls-1);
 }
 
 .hidden {
@@ -49,7 +135,3 @@ body {
   position: absolute;
   width: 1px;
 }
-
-/* .icons {
-  display: none;
-} */
