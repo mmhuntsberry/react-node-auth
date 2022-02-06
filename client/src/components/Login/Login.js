@@ -1,17 +1,13 @@
 import React from "react";
-import styles from "./Login.module.scss";
-import userIcon from "../assets/user-icon3.svg";
-import icons from "../assets/icons.svg";
+import { Link } from "react-router-dom";
+import styles from "./login.module.scss";
+import icons from "../../assets/icons.svg";
 
 export function Login() {
   return (
-    <form>
+    <form className={styles.container}>
       <div className={`${styles.form} ${styles.login}`}>
         <div className={styles.field}>
-          {/* <label htmlFor="login__username" className={styles.label}>
-            <img className={styles.icon} src={userIcon} alt="user icon" />
-            <span className="hidden">Username</span>
-          </label> */}
           <label for="login__password" className={styles.label}>
             <svg className={styles.icon}>
               <use xlinkHref={`${icons}#icon-user`}></use>
@@ -27,10 +23,6 @@ export function Login() {
           />
         </div>
         <div className={styles.field}>
-          {/* <label htmlFor="login__username" className={styles.label}>
-            <img className={styles.icon} src={userIcon} alt="user icon" />
-            <span className="hidden">Username</span>
-          </label> */}
           <label for="login__password" className={styles.label}>
             <svg className={styles.icon}>
               <use xlinkHref={`${icons}#icon-lock`}></use>
@@ -48,14 +40,15 @@ export function Login() {
         <button type="submit" className={styles.button}>
           Login
         </button>
+        <section className={styles.member}>
+          <p class={styles.text}>
+            Not a member? <Link to="/signup">Sign up now</Link>{" "}
+          </p>
+          <svg class={`${styles.icon} ${styles.arrow}`}>
+            <use xlinkHref={`${icons}#icon-arrow-right`}></use>
+          </svg>
+        </section>
       </div>
-
-      <p class={styles.text}>
-        Not a member? <a href="#">Sign up now</a>{" "}
-        <svg class={styles.icon}>
-          <use xlinkHref={`${icons}#icon-arrow-right`}></use>
-        </svg>
-      </p>
     </form>
   );
 }

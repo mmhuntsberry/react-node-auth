@@ -1,4 +1,13 @@
-@use "../App.scss";
+@use "../../App.scss";
+
+.container {
+  text-align: center;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto min-content;
+  align-items: center;
+  justify-content: center;
+}
 
 .form {
   display: grid;
@@ -31,29 +40,23 @@
   border: none;
   padding-left: 8px;
   flex: 1;
+  caret-color: var(--gray-5);
+  color: var(--gray-5);
 
   &::placeholder {
-    color: var(--gray-5);
+    color: var(--gray-4);
+  }
+
+  &:focus {
+    outline: 2px solid #ea4b88;
   }
 }
 
-/* .icon {
-  display: inline-block;
-  width: 48px;
-  vertical-align: middle;
-} */
 .icon {
   align-self: center;
-
-  padding: 0 12px;
-  // block-size: 3.2rem;
-  display: inline-block;
-  height: 40px;
+  height: 28px;
   width: 50px;
-  /* width: 48px; */
   fill: var(--gray-5);
-  /* height: 60px; */
-  // inline-size: 1.5rem;
 }
 
 .button {
@@ -61,7 +64,17 @@
   background-color: #ea4b88;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: var(--p-2);
+  color: var(--white);
+
+  &:focus {
+    outline: 2px solid var(--white);
+  }
+}
+
+.member {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .text {
@@ -72,11 +85,16 @@
 }
 
 .text > a {
-  padding-left: var(--p-2);
+  margin-left: var(--p-2);
+
+  &:focus {
+    outline: 2px solid var(--white);
+  }
 }
 
-.text > .icon {
-  // padding: var(--p-3);
-  height: 16px;
-  padding-left: 0;
+.arrow {
+  padding-right: 24px;
+  align-self: center;
+  margin-top: 2px;
+  height: 12px;
 }
